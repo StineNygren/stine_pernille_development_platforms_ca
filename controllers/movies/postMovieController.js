@@ -27,11 +27,7 @@ export const postMovie = async (req, res) => {
 
     await database
       .collection("studios")
-      .updateOne(
-        { name: studio },
-        { $push: { movies: movie.title } },
-        { session }
-      );
+      .updateOne({ name: studio }, { $push: { movies: title } }, { session });
 
     await session.commitTransaction();
     session.endSession();
