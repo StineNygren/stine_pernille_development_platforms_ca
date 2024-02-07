@@ -14,6 +14,8 @@ export const deleteMovie = async (req, res) => {
       return res.status(404).json({ message: "Movie not found" });
     }
 
+    await database.collection("movies").deleteOne(movie);
+
     await database
       .collection("studios")
       .updateMany({ movies: movie.title }, { $pull: { movies: movie.title } });

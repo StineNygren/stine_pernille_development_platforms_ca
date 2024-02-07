@@ -1,6 +1,8 @@
 import express from "express";
 import { connectDatabase, closeDatabase } from "./db.js";
 import moviesRoutes from "./routes/moviesRoutes.js";
+import characterRoutes from "./routes/charactersRoutes.js";
+import studiosRoutes from "./routes/studiosRoutes.js";
 
 const port = process.env.PORT || 3000;
 
@@ -23,6 +25,8 @@ async function run() {
 run().catch(console.dir);
 
 app.use("/movies", moviesRoutes);
+app.use("/characters", characterRoutes);
+app.use("/studios", studiosRoutes);
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
