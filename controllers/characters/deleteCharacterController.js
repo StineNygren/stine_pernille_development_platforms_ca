@@ -22,6 +22,7 @@ export const deleteCharacter = async (req, res) => {
         { title: character.movie },
         { $pull: { characters: character.name } }
       );
+
     res.json({ message: "Character successfully deleted" });
   } catch (error) {
     res.json(error);
