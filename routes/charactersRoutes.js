@@ -1,9 +1,11 @@
 import express from "express";
-import { addCharacter } from "../controllers/characters/addCharacterController.js";
-import { deleteCharacter } from "../controllers/characters/deleteCharacterController.js";
-import { getCharacters } from "../controllers/characters/getCharactersController.js";
-import { editCharacter } from "../controllers/characters/editCharacterController.js";
-import { getCharacter } from "../controllers/characters/getCharacterController.js";
+import {
+  addCharacter,
+  deleteCharacter,
+  getCharacters,
+  editCharacter,
+  getCharacter,
+} from "../controllers/CharactersController.js";
 
 const router = express.Router();
 

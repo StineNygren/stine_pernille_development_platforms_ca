@@ -1,7 +1,9 @@
 import express from "express";
-import { postMovie } from "../controllers/movies/postMovieController.js";
-import { getMovies } from "../controllers/movies/getMoviesController.js";
-import { deleteMovie } from "../controllers/movies/deleteMovieController.js";
+import {
+  postMovie,
+  getMovies,
+  deleteMovie,
+} from "../controllers/MoviesController.js";
 
 const router = express.Router();
 

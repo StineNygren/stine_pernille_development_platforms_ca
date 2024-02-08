@@ -1,4 +1,4 @@
-import { connectDatabase, closeDatabase } from "../../db.js";
+import { connectDatabase, closeDatabase } from "../db.js";
 
 export const getStudios = async (req, res) => {
   try {
